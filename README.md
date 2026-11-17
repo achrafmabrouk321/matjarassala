@@ -1,1 +1,1227 @@
-# matjarassala
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أصالة الجبل | منتجات مجالية مغربية طبيعية وأصيلة</title>
+    <!-- تحميل خط Cairo و Tajawal من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- تحميل Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: {
+                            DEFAULT: '#FAF7F2',
+                            dark: '#F0EAE0',
+                            light: '#FFFDF9'
+                        },
+                        olive: {
+                            DEFAULT: '#3B5238',
+                            dark: '#2C3E2A',
+                            light: '#526E4E',
+                            soft: '#EBF0EA'
+                        },
+                        amberEarth: {
+                            DEFAULT: '#B87333',
+                            light: '#D4924A',
+                            dark: '#935822',
+                            soft: '#F9EFE4'
+                        },
+                        charcoal: '#242424'
+                    },
+                    fontFamily: {
+                        sans: ['Cairo', 'Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FAF7F2;
+            color: #242424;
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+        }
+        /* زخرفة هندسية مغربية خفيفة للخلفيات */
+        .moroccan-pattern {
+            background-image: radial-gradient(#3B5238 0.75px, transparent 0.75px), radial-gradient(#B87333 0.75px, #FAF7F2 0.75px);
+            background-size: 32px 32px;
+            background-position: 0 0, 16px 16px;
+            opacity: 0.04;
+        }
+        /* تأثيرات بطاقات المنتجات */
+        .product-card {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(59, 82, 56, 0.08), 0 8px 10px -6px rgba(59, 82, 56, 0.04);
+        }
+        /* شريط التمرير المخصص */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C4B9A8;
+            border-radius: 999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #3B5238;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-olive selection:text-white">
+
+    <!-- شريط علوي للإعلانات -->
+    <div class="bg-olive-dark text-cream text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        <span class="inline-flex items-center gap-2">
+            <span>🚚 توصيل مجاني للطلبات التي تفوق <strong>300 درهم</strong> إلى جميع المدن المغربية</span>
+            <span class="hidden sm:inline text-amberEarth-light">|</span>
+            <span class="hidden sm:inline">💳 الدفع نقداً عند الاستلام بعد المعاينة</span>
+        </span>
+    </div>
+
+    <!-- القائمة العلوية (Header) -->
+    <header class="sticky top-0 z-40 bg-cream/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- الشعار (Logo) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-olive flex items-center justify-center text-cream shadow-sm group-hover:bg-olive-dark transition-colors">
+                        <!-- أيقونة غصن زيتون وجبل -->
+                        <svg class="w-7 h-7" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 27L14 14L20 22L24 17L31 27H5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 11C18 11 21 6 26 7C26 12 21 14 18 11Z" fill="#D4924A"/>
+                            <path d="M17 13C17 13 13 9 9 11C10 15 14 16 17 13Z" fill="#D4924A"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-xl sm:text-2xl font-extrabold text-olive-dark tracking-tight leading-none">أصالة الجبل</span>
+                        <span class="block text-[11px] text-amberEarth font-semibold mt-1">منتجات مجالية مغربية</span>
+                    </div>
+                </a>
+
+                <!-- روابط التنقل (Desktop) -->
+                <nav class="hidden md:flex items-center gap-8 text-base font-semibold text-stone-700">
+                    <a href="#home" class="hover:text-olive transition-colors">الرئيسية</a>
+                    <a href="#products" class="hover:text-olive transition-colors">منتجاتنا</a>
+                    <a href="#story" class="hover:text-olive transition-colors">قصتنا ومصدرنا</a>
+                    <a href="#reviews" class="hover:text-olive transition-colors">آراء الزبناء</a>
+                    <a href="#contact" class="hover:text-olive transition-colors">تواصل معنا</a>
+                </nav>
+
+                <!-- أزرار الإجراءات (السلة + القائمة للموبايل) -->
+                <div class="flex items-center gap-3">
+                    <button onclick="toggleCart()" aria-label="سلة المشتريات" class="relative flex items-center gap-2 bg-white hover:bg-olive-soft text-olive-dark border border-stone-200 px-4 py-2.5 rounded-2xl font-bold text-sm transition-all shadow-sm">
+                        <svg class="w-5 h-5 text-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                        </svg>
+                        <span class="hidden sm:inline">السلة</span>
+                        <span id="cart-badge" class="bg-amberEarth text-white text-xs font-extrabold px-2 py-0.5 rounded-full transition-transform">0</span>
+                    </button>
+
+                    <!-- زر القائمة للهواتف -->
+                    <button onclick="toggleMobileMenu()" aria-label="القائمة" class="md:hidden p-2.5 rounded-xl bg-white border border-stone-200 text-stone-700 hover:bg-stone-100">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- القائمة المنسدلة للهواتف -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream-light border-b border-stone-200 px-4 pt-2 pb-5 space-y-2">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-xl font-semibold text-stone-700 hover:bg-olive-soft hover:text-olive">الرئيسية</a>
+            <a href="#products" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-xl font-semibold text-stone-700 hover:bg-olive-soft hover:text-olive">منتجاتنا</a>
+            <a href="#story" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-xl font-semibold text-stone-700 hover:bg-olive-soft hover:text-olive">قصتنا ومصدرنا</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-xl font-semibold text-stone-700 hover:bg-olive-soft hover:text-olive">آراء الزبناء</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2.5 px-3 rounded-xl font-semibold text-stone-700 hover:bg-olive-soft hover:text-olive">تواصل معنا</a>
+        </div>
+    </header>
+
+    <!-- القسم البصري الرئيسي (Hero Section) -->
+    <section id="home" class="relative overflow-hidden py-12 sm:py-20 lg:py-24">
+        <div class="absolute inset-0 moroccan-pattern pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                <!-- النصوص والعنوان -->
+                <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-olive-soft text-olive-dark px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold border border-olive/15">
+                        <span class="w-2 h-2 rounded-full bg-olive animate-pulse"></span>
+                        <span>مباشرة من تعاونيات الأطلس وسوس إلى مائدتكم</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-olive-dark leading-[1.2]">
+                        طعم الأصالة في <span class="text-amberEarth relative inline-block">كل قطرة
+                            <svg class="w-full h-3 absolute -bottom-1 right-0 text-amberEarth/30" viewBox="0 0 200 12" fill="none">
+                                <path d="M2 9C55 2 145 2 198 9" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                            </svg>
+                        </span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg lg:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        من قلب الطبيعة المغربية إلى مائدتكم، ننتقي لكم أجود المنتجات المجالية بكل أمانة وشفافية. زيوت طبيعية وأملو بلدي أصيل، معصور ومحضر بعناية لنضمن لكم المذاق الحقيقي والجودة التي تستحقها عائلتكم.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#products" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-olive hover:bg-olive-dark text-white font-bold text-base shadow-lg shadow-olive/20 transition-all flex items-center justify-center gap-2">
+                            <span>اكتشف منتجاتنا</span>
+                            <svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#story" class="w-full sm:w-auto px-7 py-4 rounded-2xl bg-white hover:bg-cream-dark text-olive-dark border border-stone-300 font-bold text-base transition-all text-center">
+                            تعرف على مصدر منتجاتنا
+                        </a>
+                    </div>
+
+                    <!-- مؤشرات ثقة سريعة -->
+                    <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-sm text-stone-600 font-medium">
+                        <div class="flex items-center gap-2">
+                            <span class="text-olive font-bold">✓</span> بدون إضافات أو مواد حافظة
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-olive font-bold">✓</span> تتبع كامل لمصدر التعاونية
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-olive font-bold">✓</span> تعبئة زجاجية تحفظ الجودة
+                        </div>
+                    </div>
+                </div>
+
+                <!-- العرض البصري للمنتجات (تشكيلة بصرية مصممة بعناية) -->
+                <div class="lg:col-span-5">
+                    <div class="relative bg-gradient-to-br from-olive-soft via-cream-dark to-amberEarth-soft p-6 sm:p-8 rounded-[2.5rem] border border-stone-200/80 shadow-xl">
+                        <!-- بطاقة عائمة -->
+                        <div class="absolute -top-4 -right-3 sm:-right-5 bg-white px-4 py-2.5 rounded-2xl shadow-md border border-stone-100 flex items-center gap-2.5 z-20">
+                            <span class="text-2xl">🫒</span>
+                            <div>
+                                <p class="text-xs font-extrabold text-olive-dark">عصرة أولى على البارد</p>
+                                <p class="text-[11px] text-stone-500">موسم الجني الحالي</p>
+                            </div>
+                        </div>
+
+                        <!-- رسم توضيحي فني للمنتجات الثلاثة -->
+                        <div class="aspect-square rounded-3xl bg-cream-light border border-stone-200/60 flex flex-col items-center justify-center p-6 relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amberEarth/10 via-transparent to-transparent"></div>
+                            
+                            <!-- SVG فني يمثل قنينات زيت الزيتون وأركان وجرة أملو -->
+                            <svg class="w-full h-full max-h-72 drop-shadow-md" viewBox="0 0 360 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <!-- ظل الأرضية -->
+                                <ellipse cx="180" cy="248" rx="135" ry="14" fill="#E6DEC8"/>
+                                
+                                <!-- قنينة زيت الزيتون (يسار) -->
+                                <g transform="translate(55, 35)">
+                                    <rect x="26" y="0" width="18" height="16" rx="3" fill="#8C5828"/>
+                                    <path d="M28 16H42L45 48C56 54 62 66 62 80V195C62 203 55 210 47 210H23C15 210 8 203 8 195V80C8 66 14 54 25 48L28 16Z" fill="#3B5238"/>
+                                    <path d="M14 82C14 72 19 62 28 57V198H22C17 198 14 194 14 189V82Z" fill="#526E4E" opacity="0.45"/>
+                                    <!-- ملصق القنينة -->
+                                    <rect x="13" y="95" width="44" height="72" rx="6" fill="#FAF7F2"/>
+                                    <rect x="16" y="98" width="38" height="66" rx="4" stroke="#B87333" stroke-width="1"/>
+                                    <circle cx="35" cy="116" r="8" fill="#EBF0EA"/>
+                                    <path d="M32 117C32 114 35 111 38 112C38 115 35 118 32 117Z" fill="#3B5238"/>
+                                    <rect x="21" y="131" width="28" height="4" rx="2" fill="#2C3E2A"/>
+                                    <rect x="25" y="140" width="20" height="3" rx="1.5" fill="#B87333"/>
+                                    <rect x="23" y="148" width="24" height="2.5" rx="1" fill="#A8A29E"/>
+                                </g>
+
+                                <!-- جرة أملو البلدي (وسط - بارزة) -->
+                                <g transform="translate(132, 75)">
+                                    <!-- غطاء الجرة -->
+                                    <rect x="14" y="8" width="68" height="16" rx="6" fill="#935822"/>
+                                    <rect x="14" y="18" width="68" height="5" fill="#784418"/>
+                                    <!-- جسم الجرة -->
+                                    <rect x="10" y="23" width="76" height="145" rx="22" fill="#C88A3B"/>
+                                    <path d="M18 32C18 28 22 26 26 26H36V162H24C20 162 18 158 18 154V32Z" fill="#E0A558" opacity="0.4"/>
+                                    <!-- ملصق أملو -->
+                                    <rect x="15" y="56" width="66" height="78" rx="10" fill="#FAF7F2"/>
+                                    <rect x="19" y="60" width="58" height="70" rx="7" stroke="#3B5238" stroke-width="1.2"/>
+                                    <circle cx="48" cy="78" r="9" fill="#F9EFE4"/>
+                                    <ellipse cx="48" cy="78" rx="4" ry="6" fill="#B87333"/>
+                                    <rect x="28" y="94" width="40" height="5" rx="2.5" fill="#2C3E2A"/>
+                                    <rect x="33" y="104" width="30" height="3.5" rx="1.5" fill="#B87333"/>
+                                    <rect x="30" y="113" width="36" height="2.5" rx="1" fill="#A8A29E"/>
+                                </g>
+
+                                <!-- قنينة زيت أركان (يمين) -->
+                                <g transform="translate(238, 52)">
+                                    <rect x="22" y="0" width="16" height="15" rx="3" fill="#2C3E2A"/>
+                                    <path d="M24 15H36L39 42C48 47 53 57 53 69V178C53 185 47 191 40 191H20C13 191 7 185 7 178V69C7 57 12 47 21 42L24 15Z" fill="#D4924A"/>
+                                    <path d="M12 72C12 63 16 55 23 50V180H18C14 180 12 177 12 172V72Z" fill="#F3BA78" opacity="0.45"/>
+                                    <!-- ملصق أركان -->
+                                    <rect x="11" y="84" width="38" height="64" rx="6" fill="#FAF7F2"/>
+                                    <circle cx="30" cy="102" r="7" fill="#F9EFE4"/>
+                                    <circle cx="30" cy="102" r="3.5" fill="#B87333"/>
+                                    <rect x="17" y="115" width="26" height="4" rx="2" fill="#2C3E2A"/>
+                                    <rect x="20" y="123" width="20" height="3" rx="1.5" fill="#3B5238"/>
+                                    <rect x="18" y="131" width="24" height="2.5" rx="1" fill="#A8A29E"/>
+                                </g>
+                            </svg>
+
+                            <div class="text-center mt-2">
+                                <span class="text-xs font-bold text-olive-dark bg-olive-soft px-3 py-1 rounded-full">تشكيلة أصالة الجبل المختارة</span>
+                            </div>
+                        </div>
+
+                        <!-- بطاقة عائمة سفلية -->
+                        <div class="mt-4 bg-white/90 backdrop-blur-sm p-3.5 rounded-2xl border border-stone-200/70 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amberEarth-soft text-amberEarth flex items-center justify-center font-bold text-lg">
+                                    ★
+                                </div>
+                                <div>
+                                    <p class="text-xs sm:text-sm font-bold text-stone-800">ثقة أكثر من 1,400 أسرة مغربية</p>
+                                    <p class="text-[11px] text-stone-500">تقييم 4.9/5 على جودة المذاق والتغليف</p>
+                                </div>
+                            </div>
+                            <a href="#products" class="text-xs font-bold text-olive hover:underline">اطلب الآن ←</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- شريط الموثوقية (Trust Badges) -->
+    <section class="py-8 bg-white border-y border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- ميزة 1 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream/60 border border-stone-100">
+                    <div class="w-12 h-12 rounded-2xl bg-olive-soft text-olive flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-olive-dark text-base">100% طبيعي ومجالي</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 mt-1 leading-relaxed">منتجات خام من تعاونيات محلية موثوقة بدون أي غش أو خلط.</p>
+                    </div>
+                </div>
+
+                <!-- ميزة 2 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream/60 border border-stone-100">
+                    <div class="w-12 h-12 rounded-2xl bg-amberEarth-soft text-amberEarth flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-olive-dark text-base">الدفع عند الاستلام</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 mt-1 leading-relaxed">اطلب بكل راحة بال ولا تؤدي المبلغ إلا عند توصلِك بالطلبية.</p>
+                    </div>
+                </div>
+
+                <!-- ميزة 3 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream/60 border border-stone-100">
+                    <div class="w-12 h-12 rounded-2xl bg-olive-soft text-olive flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-olive-dark text-base">توصيل سريع وآمن</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 mt-1 leading-relaxed">شحن محمي بعناية فائقة خلال 24 إلى 48 ساعة لجميع المدن.</p>
+                    </div>
+                </div>
+
+                <!-- ميزة 4 -->
+                <div class="flex items-start gap-4 p-4 rounded-2xl bg-cream/60 border border-stone-100">
+                    <div class="w-12 h-12 rounded-2xl bg-amberEarth-soft text-amberEarth flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-olive-dark text-base">شفافية ومصدر واضح</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 mt-1 leading-relaxed">نذكر لك منطقة الإنتاج وطريقة التحضير بكل وضوح وأمانة.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المنتجات المميزة (Featured Products) -->
+    <section id="products" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- عنوان القسم -->
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-amberEarth font-bold text-sm tracking-wide">منتجاتنا المختارة بعناية</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-olive-dark mt-2">خيرات الأرض المغربية</h2>
+                <p class="text-stone-600 mt-3 text-sm sm:text-base">
+                    اختر الحجم المناسب لاحتياجات أسرتك. جميع منتجاتنا معبأة وفق شروط السلامة الصحية للحفاظ على نكهتها الطازجة.
+                </p>
+            </div>
+
+            <!-- أزرار التصفية (Filter Tabs) -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 mb-10">
+                <button onclick="filterProducts('all')" id="filter-all" class="filter-btn active px-5 py-2.5 rounded-xl font-bold text-sm bg-olive text-white shadow-sm transition-all">
+                    جميع المنتجات
+                </button>
+                <button onclick="filterProducts('oils')" id="filter-oils" class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-stone-700 hover:bg-olive-soft border border-stone-200 transition-all">
+                    الزيوت الطبيعية
+                </button>
+                <button onclick="filterProducts('amlou')" id="filter-amlou" class="filter-btn px-5 py-2.5 rounded-xl font-bold text-sm bg-white text-stone-700 hover:bg-olive-soft border border-stone-200 transition-all">
+                    أملو البلدي
+                </button>
+            </div>
+
+            <!-- شبكة المنتجات -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+                <!-- يتم توليد البطاقات ديناميكياً عبر JavaScript لضمان تحديث الأسعار والأحجام بسلاسة -->
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم قصتنا ومصدر المنتجات (Our Story & Origin) -->
+    <section id="story" class="py-16 sm:py-24 bg-white border-y border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- البطاقات التعريفية بالمناطق -->
+                <div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="bg-cream p-6 rounded-3xl border border-stone-200/70 space-y-3">
+                        <div class="w-11 h-11 rounded-2xl bg-olive text-white flex items-center justify-center font-bold text-lg">01</div>
+                        <h3 class="text-lg font-extrabold text-olive-dark">بساتين الأطلس والريف</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            نختار حبات الزيتون الناضجة في وقتها المثالي، وتُعصر على البارد في معاصر حديثة ونظيفة للحفاظ على نكهتها الفاكهية المتوازنة وحموضتها المنخفضة.
+                        </p>
+                    </div>
+
+                    <div class="bg-amberEarth-soft/60 p-6 rounded-3xl border border-amberEarth/20 space-y-3 sm:mt-6">
+                        <div class="w-11 h-11 rounded-2xl bg-amberEarth text-white flex items-center justify-center font-bold text-lg">02</div>
+                        <h3 class="text-lg font-extrabold text-olive-dark">تعاونيات سوس ماسة</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            شراكة مباشرة مع تعاونيات نسائية قروية متخصصة في استخلاص زيت أركان وتحضير أملو باللوز البلدي المحمص على نار هادئة والعسل الطبيعي.
+                        </p>
+                    </div>
+
+                    <div class="bg-olive-soft/70 p-6 rounded-3xl border border-olive/15 space-y-3">
+                        <div class="w-11 h-11 rounded-2xl bg-olive-dark text-white flex items-center justify-center font-bold text-lg">03</div>
+                        <h3 class="text-lg font-extrabold text-olive-dark">النظافة وسلامة التعبئة</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            نعتمد قنينات زجاجية داكنة للزيوت لحمايتها من الضوء، وجرات محكمة الإغلاق لأملو، لضمان وصول المنتج إليكم طازجاً كما خرج من مصدره.
+                        </p>
+                    </div>
+
+                    <div class="bg-cream p-6 rounded-3xl border border-stone-200/70 space-y-3 sm:mt-6">
+                        <div class="w-11 h-11 rounded-2xl bg-amberEarth-dark text-white flex items-center justify-center font-bold text-lg">04</div>
+                        <h3 class="text-lg font-extrabold text-olive-dark">الصدق قبل التسويق</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            نقدم لكم منتجات غذائية طبيعية عالية الجودة دون وعود طبية مبالغ فيها. نؤمن أن المذاق الأصيل ونظافة التحضير هما خير دليل.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- النص القصصي -->
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="inline-block bg-amberEarth-soft text-amberEarth-dark px-4 py-1.5 rounded-full text-xs font-extrabold">
+                        قصتنا والتزامنا
+                    </span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-olive-dark leading-tight">
+                        لأن المائدة المغربية تستحق الأمانة في كل تفصيل
+                    </h2>
+                    <p class="text-stone-600 text-base leading-relaxed">
+                        انطلقت فكرة <strong>"أصالة الجبل"</strong> من حاجة بسيطة وحقيقية: صعوبة العثور على منتجات مجالية مغربية موثوقة المصدر في المدن الكبرى دون القلق من الغش أو سوء التخزين.
+                    </p>
+                    <p class="text-stone-600 text-base leading-relaxed">
+                        نحن لا نعمل كوسطاء عاديين، بل ننتقل بأنفسنا إلى التعاونيات الفلاحية في سوس والأطلس، نتذوق المحصول، نراقب شروط النظافة والتصفية، ونوفر لكم المنتج باسم منطقته الحقيقية وبفصل واضح بين زيت أركان المخصص للمائدة وذلك المخصص للعناية الخارجية.
+                    </p>
+
+                    <div class="pt-2 border-t border-stone-200 grid grid-cols-3 gap-4 text-center sm:text-right">
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-olive">+12</span>
+                            <span class="text-xs text-stone-500 font-semibold">تعاونية شريكة</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-amberEarth">100%</span>
+                            <span class="text-xs text-stone-500 font-semibold">تتبع للمصدر</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl sm:text-3xl font-extrabold text-olive-dark">48 س</span>
+                            <span class="text-xs text-stone-500 font-semibold">متوسط التوصيل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم آراء الزبناء (Customer Reviews) -->
+    <section id="reviews" class="py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-amberEarth font-bold text-sm">شهادات نعتز بها</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-olive-dark mt-2">ماذا يقول زبناؤنا في مختلف المدن؟</h2>
+                <p class="text-stone-600 mt-3 text-sm sm:text-base">
+                    آراء حقيقية لأسر مغربية جربت منتجات أصالة الجبل على مائدتها اليومية.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- رأي 1 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amberEarth text-lg mb-3">
+                            ★★★★★
+                        </div>
+                        <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+                            "صراحة أملو ديالكم فكرني فالمذاق البلدي الحقيقي، ماشي حلو بزاف واللوز باين محمر على حقو وطريقو. التغليف وصلني للدار البيضاء نقي ومحكم مزيان."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-olive-dark text-sm">سلمى بناني</p>
+                            <p class="text-xs text-stone-500">الدار البيضاء • اشترت أملو البلدي</p>
+                        </div>
+                        <span class="text-xs bg-olive-soft text-olive font-bold px-2.5 py-1 rounded-full">زبونة مؤكدة</span>
+                    </div>
+                </div>
+
+                <!-- رأي 2 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amberEarth text-lg mb-3">
+                            ★★★★★
+                        </div>
+                        <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+                            "خديت زيت الزيتون البكري 1 لتر للتجربة، ريحتو طرية وخفيف فالفطور مع الخبز السخون. عجبني بزاف الوضوح فالمعلومات والاحترام فالتعامل مع الموزع."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-olive-dark text-sm">يوسف الإدريسي</p>
+                            <p class="text-xs text-stone-500">الرباط • اشترى زيت الزيتون البكري</p>
+                        </div>
+                        <span class="text-xs bg-olive-soft text-olive font-bold px-2.5 py-1 rounded-full">زبون مؤكد</span>
+                    </div>
+                </div>
+
+                <!-- رأي 3 -->
+                <div class="bg-white p-6 sm:p-7 rounded-3xl border border-stone-200/80 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-1 text-amberEarth text-lg mb-3">
+                            ★★★★★
+                        </div>
+                        <p class="text-stone-700 text-sm sm:text-base leading-relaxed">
+                            "أحسن حاجة هي أنكم مفرقين بوضوح بين أركان المائدة وأركان التجميل. جربتهم بجوج وجودتهم ممتازة، والتوصيل لطنجة ما تعطلش نهائياً."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <p class="font-bold text-olive-dark text-sm">خديجة التازي</p>
+                            <p class="text-xs text-stone-500">طنجة • اشترت زيت أركان</p>
+                        </div>
+                        <span class="text-xs bg-olive-soft text-olive font-bold px-2.5 py-1 rounded-full">زبونة مؤكدة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة (Footer) -->
+    <footer id="contact" class="bg-olive-dark text-cream pt-14 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+                <!-- عن العلامة -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amberEarth flex items-center justify-center text-white font-extrabold text-xl">
+                            أ
+                        </div>
+                        <span class="text-2xl font-extrabold text-white">أصالة الجبل</span>
+                    </div>
+                    <p class="text-sm text-stone-300 leading-relaxed">
+                        من قلب الطبيعة المغربية إلى مائدتكم، ننتقي لكم أجود المنتجات المجالية بكل أمانة وشفافية من تعاونيات موثوقة.
+                    </p>
+                    <div class="flex items-center gap-3 pt-1">
+                        <a href="#products" class="w-9 h-9 rounded-full bg-white/10 hover:bg-amberEarth flex items-center justify-center transition-colors" aria-label="إنستغرام">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#products" class="w-9 h-9 rounded-full bg-white/10 hover:bg-amberEarth flex items-center justify-center transition-colors" aria-label="فيسبوك">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- روابط سريعة -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">روابط سريعة</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li><a href="#home" class="hover:text-amberEarth-light transition-colors">الرئيسية</a></li>
+                        <li><a href="#products" class="hover:text-amberEarth-light transition-colors">منتجاتنا المجالية</a></li>
+                        <li><a href="#story" class="hover:text-amberEarth-light transition-colors">قصتنا والتعاونيات</a></li>
+                        <li><a href="#reviews" class="hover:text-amberEarth-light transition-colors">آراء الزبناء</a></li>
+                    </ul>
+                </div>
+
+                <!-- خدمة الزبناء -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">خدمة الزبناء والتوصيل</h4>
+                    <ul class="space-y-2.5 text-sm text-stone-300">
+                        <li>📍 التوصيل لجميع المدن المغربية</li>
+                        <li>💳 الدفع نقداً عند الاستلام</li>
+                        <li>📦 تغليف آمن ضد الكسر والتسرب</li>
+                        <li>🔄 إمكانية استبدال المنتج في حال أي عيب</li>
+                    </ul>
+                </div>
+
+                <!-- تواصل معنا -->
+                <div>
+                    <h4 class="text-white font-bold text-base mb-4">تواصل معنا مباشرة</h4>
+                    <div class="space-y-3 text-sm text-stone-300">
+                        <p class="flex items-center gap-2">
+                            <span>📞 الهاتف / واتساب:</span>
+                            <span dir="ltr" class="font-bold text-white">+212 6 00 00 00 00</span>
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <span>✉️ البريد:</span>
+                            <span>contact@assalataljabal.ma</span>
+                        </p>
+                        <p class="text-xs text-stone-400 pt-1">
+                            أوقات العمل: من الإثنين إلى السبت (09:00 - 20:00)
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-4">
+                <p>© 2026 أصالة الجبل (Assalat Al Jabal). جميع الحقوق محفوظة.</p>
+                <p>منتجات غذائية طبيعية 100% — صنع بفخر في المغرب 🇲🇦</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة تفاصيل المنتج (Product Details Modal) -->
+    <div id="product-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-[fadeIn_0.2s_ease-out] max-h-[90vh] overflow-y-auto">
+            <button onclick="closeProductModal()" aria-label="إغلاق" class="absolute top-5 left-5 w-9 h-9 rounded-full bg-stone-100 hover:bg-stone-200 flex items-center justify-center text-stone-600 font-bold">
+                ✕
+            </button>
+            <div id="modal-content">
+                <!-- محتوى تفاصيل المنتج يملأ ديناميكياً -->
+            </div>
+        </div>
+    </div>
+
+    <!-- سلة المشتريات الجانبية ونموذج الدفع عند الاستلام (Slide-Over Cart & COD Checkout) -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+        <!-- الخلفية المعتمة -->
+        <div onclick="toggleCart()" class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"></div>
+        
+        <!-- لوحة السلة -->
+        <div class="absolute inset-y-0 left-0 max-w-md w-full bg-cream shadow-2xl flex flex-col h-full">
+            <!-- رأس السلة -->
+            <div class="p-5 bg-white border-b border-stone-200 flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <span class="text-xl">🛍️</span>
+                    <h3 class="text-lg font-extrabold text-olive-dark">سلة مشترياتك</h3>
+                </div>
+                <button onclick="toggleCart()" class="w-9 h-9 rounded-xl bg-stone-100 hover:bg-stone-200 flex items-center justify-center text-stone-700 font-bold">
+                    ✕
+                </button>
+            </div>
+
+            <!-- محتوى السلة القابل للتمرير -->
+            <div class="flex-1 overflow-y-auto p-5 space-y-6">
+                <!-- قائمة المنتجات في السلة -->
+                <div id="cart-items-container" class="space-y-3">
+                    <!-- يتم عرض العناصر هنا -->
+                </div>
+
+                <!-- ملخص الحساب -->
+                <div id="cart-summary-box" class="hidden bg-white p-4 rounded-2xl border border-stone-200/80 space-y-2.5 text-sm">
+                    <div class="flex justify-between text-stone-600">
+                        <span>المجموع الفرعي:</span>
+                        <span id="cart-subtotal" class="font-bold text-stone-800">0 درهم</span>
+                    </div>
+                    <div class="flex justify-between text-stone-600">
+                        <span>مصاريف التوصيل:</span>
+                        <span id="cart-shipping" class="font-bold text-olive">35 درهم</span>
+                    </div>
+                    <div id="free-shipping-hint" class="text-xs text-amberEarth-dark bg-amberEarth-soft px-3 py-1.5 rounded-lg">
+                        أضف منتجات بقيمة <span id="remaining-for-free" class="font-bold">300</span> درهم للحصول على توصيل مجاني!
+                    </div>
+                    <div class="pt-2 border-t border-stone-100 flex justify-between text-base font-extrabold text-olive-dark">
+                        <span>المجموع الإجمالي:</span>
+                        <span id="cart-total">0 درهم</span>
+                    </div>
+                </div>
+
+                <!-- استمارة الطلب السريع (الدفع عند الاستلام) -->
+                <form id="cod-checkout-form" onsubmit="submitOrder(event)" class="hidden bg-white p-5 rounded-2xl border border-olive/20 space-y-4">
+                    <div class="flex items-center gap-2 pb-2 border-b border-stone-100">
+                        <span class="w-2.5 h-2.5 rounded-full bg-olive"></span>
+                        <h4 class="font-extrabold text-olive-dark text-base">معلومات التوصيل (الدفع عند الاستلام)</h4>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">الاسم الكامل *</label>
+                        <input type="text" id="customer-name" required placeholder="مثال: محمد العلوي" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-olive focus:ring-2 focus:ring-olive/20 outline-none text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">رقم الهاتف (المغرب) *</label>
+                        <input type="tel" id="customer-phone" required placeholder="06XXXXXXXX أو 07XXXXXXXX" pattern="^(0|\+212)[5-7][0-9]{8}$" title="المرجو إدخال رقم هاتف مغربي صحيح مكون من 10 أرقام" dir="ltr" class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-olive focus:ring-2 focus:ring-olive/20 outline-none text-sm text-right">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">المدينة *</label>
+                        <select id="customer-city" required class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-olive focus:ring-2 focus:ring-olive/20 outline-none text-sm bg-white">
+                            <option value="">اختر مدينتك...</option>
+                            <option value="الدار البيضاء">الدار البيضاء</option>
+                            <option value="الرباط">الرباط</option>
+                            <option value="طنجة">طنجة</option>
+                            <option value="مراكش">مراكش</option>
+                            <option value="فاس">فاس</option>
+                            <option value="أكادير">أكادير</option>
+                            <option value="مكناس">مكناس</option>
+                            <option value="وجدة">وجدة</option>
+                            <option value="القنيطرة">القنيطرة</option>
+                            <option value="تطوان">تطوان</option>
+                            <option value="سلا">سلا</option>
+                            <option value="المحمدية">المحمدية</option>
+                            <option value="الجديدة">الجديدة</option>
+                            <option value="بني ملال">بني ملال</option>
+                            <option value="الناظور">الناظور</option>
+                            <option value="العيون">العيون</option>
+                            <option value="مدينة أخرى">مدينة أخرى</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">العنوان بالتفصيل *</label>
+                        <textarea id="customer-address" rows="2" required placeholder="الحي، اسم الشارع، رقم العمارة أو المنزل..." class="w-full px-3.5 py-2.5 rounded-xl border border-stone-300 focus:border-olive focus:ring-2 focus:ring-olive/20 outline-none text-sm"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-olive hover:bg-olive-dark text-white font-extrabold text-sm shadow-lg shadow-olive/20 transition-all flex items-center justify-center gap-2">
+                        <span>تأكيد الطلب الآن</span>
+                        <span>✓</span>
+                    </button>
+                    <p class="text-[11px] text-center text-stone-500">
+                        سيتصل بك فريقنا هاتفياً لتأكيد الطلبية قبل إرسالها.
+                    </p>
+                </form>
+
+                <!-- رسالة تأكيد الطلب الناجح -->
+                <div id="order-success-box" class="hidden bg-white p-6 rounded-3xl border-2 border-olive text-center space-y-4">
+                    <div class="w-16 h-16 rounded-full bg-olive-soft text-olive flex items-center justify-center mx-auto text-3xl font-bold">
+                        ✓
+                    </div>
+                    <h4 class="text-xl font-extrabold text-olive-dark">تم استلام طلبك بنجاح!</h4>
+                    <p class="text-sm text-stone-600 leading-relaxed">
+                        شكراً لثقتك في <strong>أصالة الجبل</strong>. رقم مرجع طلبيتك هو:
+                        <span id="order-ref-number" class="block font-extrabold text-amberEarth text-lg mt-1">#ASJ-2026</span>
+                    </p>
+                    <div class="bg-cream p-3.5 rounded-2xl text-xs text-stone-700 text-right space-y-1" id="order-summary-details">
+                    </div>
+                    <button onclick="resetAfterOrder()" class="w-full py-3 rounded-xl bg-olive text-white font-bold text-sm hover:bg-olive-dark transition-colors">
+                        متابعة التسوق
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- إشعار منبثق صغير (Toast Notification) -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 bg-olive-dark text-white px-5 py-3.5 rounded-2xl shadow-xl flex items-center gap-3 text-sm font-bold pointer-events-none">
+        <span class="w-6 h-6 rounded-full bg-amberEarth flex items-center justify-center text-xs">✓</span>
+        <span id="toast-message">تمت إضافة المنتج إلى السلة</span>
+    </div>
+
+    <!-- السكربت التفاعلي للمتجر -->
+    <script>
+        // بيانات المنتجات الأساسية للمتجر المغربي
+        const productsData = [
+            {
+                id: 'amlou-beldi',
+                name: 'أملو البلدي الأصيل باللوز والعسل',
+                category: 'amlou',
+                origin: 'تعاونيات سوس ماسة',
+                badge: 'الأكثر طلباً',
+                shortDesc: 'محضر من اللوز البلدي المحمص بعناية، زيت أركان الغذائي البكر، والعسل الطبيعي الحر بقوام كريمي غني.',
+                ingredients: 'لوز بلدي محمص (65%)، زيت أركان للمائدة معصور تقليدياً (25%)، عسل زهور طبيعي (10%). خالٍ تماماً من السكر المضاف أو الزيوت النباتية المهدرجة.',
+                usage: 'مثالي لوجبة الإفطار المغربية أو اللمجة مع الخبز الساخن، المسمن، أو البغرير. يُحرك جيداً قبل الاستعمال لأن انفصال الزيت طبيعي.',
+                storage: 'يُحفظ في مكان جاف ومعتدل الحرارة بعيداً عن أشعة الشمس المباشرة.',
+                colorTheme: 'amber',
+                svgType: 'jar',
+                variants: [
+                    { size: '250 غرام', price: 85 },
+                    { size: '500 غرام', price: 160 },
+                    { size: '1 كيلوغرام', price: 300 }
+                ]
+            },
+            {
+                id: 'olive-oil-extra',
+                name: 'زيت الزيتون البكري الممتاز',
+                category: 'oils',
+                origin: 'بساتين الأطلس والريف',
+                badge: 'عصرة أولى على البارد',
+                shortDesc: 'زيت زيتون بكر ممتاز ذو نكهة فاكهية متوازنة وحموضة منخفضة، معصور مباشرة بعد الجني للحفاظ على طراوته.',
+                ingredients: '100% زيت زيتون مغربي بكر ممتاز مستخلص ميكانيكياً على البارد بدون أي تكرير أو خلط.',
+                usage: 'مناسب للتتبيل البارد، السلطات، وجبة الإفطار، والطهي المغربي الأصيل.',
+                storage: 'يُحفظ في قنينته الزجاجية الداكنة محكمة الإغلاق بعيداً عن الحرارة والضوء.',
+                colorTheme: 'olive',
+                svgType: 'bottle-olive',
+                variants: [
+                    { size: '500 مل', price: 55 },
+                    { size: '1 لتر', price: 95 },
+                    { size: '2 لتر', price: 185 }
+                ]
+            },
+            {
+                id: 'argan-culinary',
+                name: 'زيت أركان للمائدة (محمص)',
+                category: 'oils',
+                origin: 'تعاونيات تارودانت وسوس',
+                badge: 'مخصص للغذاء',
+                shortDesc: 'زيت أركان غذائي أصيل مستخلص من حبات أركان المحمصة برفق، يتميز بلونه الذهبي الداكن ورائحته الدافئة الشهية.',
+                ingredients: '100% زيت أركان غذائي نقي من ثمار شجرة الأركان المغربية، محمص ومستخلص وفق معايير السلامة الغذائية.',
+                usage: 'يُضاف كلمسة نهائية دافئة فوق الكسكس، الطاجين، السلطات، أو يُقدم مع الخبز في الفطور.',
+                storage: 'يُحفظ في مكان بارد ومظلم ويُغلق بإحكام بعد كل استعمال.',
+                colorTheme: 'amber',
+                svgType: 'bottle-argan-food',
+                variants: [
+                    { size: '250 مل', price: 110 },
+                    { size: '500 مل', price: 210 },
+                    { size: '1 لتر', price: 400 }
+                ]
+            },
+            {
+                id: 'argan-cosmetic',
+                name: 'زيت أركان التجميلي البكر (غير محمص)',
+                category: 'oils',
+                origin: 'تعاونيات الصويرة وسوس',
+                badge: 'للعناية الخارجية فقط',
+                shortDesc: 'زيت أركان نقي معصور على البارد من حبات غير محمصة، خفيف الامتصاص وبدون رائحة قوية، مخصص للعناية اليومية.',
+                ingredients: '100% زيت أركان تجميلي نقي (Argania Spinosa Kernel Oil) معصور على البارد دون أي إضافات عطرية.',
+                usage: 'يُستعمل خارجياً لترطيب البشرة الجافة، تغذية أطراف الشعر، والعناية بالأظافر. (غير مخصص للأكل).',
+                storage: 'يُحفظ بعيداً عن أشعة الشمس المباشرة.',
+                colorTheme: 'gold',
+                svgType: 'bottle-argan-cosmetic',
+                variants: [
+                    { size: '100 مل', price: 75 },
+                    { size: '250 مل', price: 150 }
+                ]
+            }
+        ];
+
+        // حالة السلة والاختيارات الحالية لكل منتج
+        let cart = [];
+        let selectedVariantIndices = {
+            'amlou-beldi': 1,       // الافتراضي 500 غرام
+            'olive-oil-extra': 1,   // الافتراضي 1 لتر
+            'argan-culinary': 0,    // الافتراضي 250 مل
+            'argan-cosmetic': 0     // الافتراضي 100 مل
+        };
+
+        // توليد رسم SVG نظيف ومخصص لكل منتج
+        function getProductSVG(type) {
+            if (type === 'jar') {
+                return `
+                <svg class="w-36 h-36 mx-auto drop-shadow-sm" viewBox="0 0 140 140" fill="none">
+                    <ellipse cx="70" cy="128" rx="42" ry="6" fill="#E6DEC8"/>
+                    <rect x="36" y="16" width="68" height="14" rx="5" fill="#784418"/>
+                    <rect x="32" y="28" width="76" height="96" rx="18" fill="#C88A3B"/>
+                    <path d="M40 36C40 33 43 31 46 31H54V118H44C41 118 40 115 40 112V36Z" fill="#E6AC60" opacity="0.45"/>
+                    <rect x="38" y="50" width="64" height="52" rx="8" fill="#FAF7F2"/>
+                    <rect x="41" y="53" width="58" height="46" rx="6" stroke="#3B5238" stroke-width="1.2"/>
+                    <circle cx="70" cy="67" r="7" fill="#F9EFE4"/>
+                    <ellipse cx="70" cy="67" rx="3.5" ry="5" fill="#B87333"/>
+                    <rect x="50" y="79" width="40" height="4" rx="2" fill="#2C3E2A"/>
+                    <rect x="55" y="87" width="30" height="3" rx="1.5" fill="#B87333"/>
+                </svg>`;
+            } else if (type === 'bottle-olive') {
+                return `
+                <svg class="w-36 h-36 mx-auto drop-shadow-sm" viewBox="0 0 140 140" fill="none">
+                    <ellipse cx="70" cy="130" rx="34" ry="5" fill="#E6DEC8"/>
+                    <rect x="62" y="10" width="16" height="12" rx="2.5" fill="#8C5828"/>
+                    <path d="M64 22H76L78 42C87 46 92 55 92 66V120C92 125 88 129 83 129H57C52 129 48 125 48 120V66C48 55 53 46 62 42L64 22Z" fill="#3B5238"/>
+                    <rect x="52" y="68" width="36" height="46" rx="5" fill="#FAF7F2"/>
+                    <rect x="55" y="71" width="30" height="40" rx="3.5" stroke="#B87333" stroke-width="1"/>
+                    <circle cx="70" cy="83" r="6" fill="#EBF0EA"/>
+                    <path d="M67 84C67 81 70 79 73 80C73 83 70 85 67 84Z" fill="#3B5238"/>
+                    <rect x="58" y="94" width="24" height="3.5" rx="1.5" fill="#2C3E2A"/>
+                    <rect x="61" y="101" width="18" height="2.5" rx="1" fill="#B87333"/>
+                </svg>`;
+            } else if (type === 'bottle-argan-food') {
+                return `
+                <svg class="w-36 h-36 mx-auto drop-shadow-sm" viewBox="0 0 140 140" fill="none">
+                    <ellipse cx="70" cy="130" rx="34" ry="5" fill="#E6DEC8"/>
+                    <rect x="62" y="12" width="16" height="12" rx="2.5" fill="#2C3E2A"/>
+                    <path d="M64 24H76L78 44C87 48 92 57 92 68V120C92 125 88 129 83 129H57C52 129 48 125 48 120V68C48 57 53 48 62 44L64 24Z" fill="#B87333"/>
+                    <rect x="52" y="68" width="36" height="46" rx="5" fill="#FAF7F2"/>
+                    <rect x="55" y="71" width="30" height="40" rx="3.5" stroke="#3B5238" stroke-width="1"/>
+                    <circle cx="70" cy="83" r="6" fill="#F9EFE4"/>
+                    <circle cx="70" cy="83" r="3" fill="#B87333"/>
+                    <rect x="58" y="94" width="24" height="3.5" rx="1.5" fill="#2C3E2A"/>
+                    <rect x="61" y="101" width="18" height="2.5" rx="1" fill="#3B5238"/>
+                </svg>`;
+            } else {
+                return `
+                <svg class="w-36 h-36 mx-auto drop-shadow-sm" viewBox="0 0 140 140" fill="none">
+                    <ellipse cx="70" cy="130" rx="30" ry="5" fill="#E6DEC8"/>
+                    <rect x="63" y="14" width="14" height="14" rx="3" fill="#B87333"/>
+                    <rect x="51" y="34" width="38" height="94" rx="12" fill="#E3B36B"/>
+                    <rect x="55" y="62" width="30" height="48" rx="5" fill="#FAF7F2"/>
+                    <circle cx="70" cy="76" r="6" fill="#F9EFE4"/>
+                    <path d="M70 72C72 75 73 77 70 79C67 77 68 75 70 72Z" fill="#D4924A"/>
+                    <rect x="59" y="88" width="22" height="3.5" rx="1.5" fill="#2C3E2A"/>
+                    <rect x="61" y="95" width="18" height="2.5" rx="1" fill="#B87333"/>
+                </svg>`;
+            }
+        }
+
+        // عرض بطاقات المنتجات
+        function renderProducts(filter = 'all') {
+            const grid = document.getElementById('products-grid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' 
+                ? productsData 
+                : productsData.filter(p => p.category === filter);
+
+            filtered.forEach(product => {
+                const activeIdx = selectedVariantIndices[product.id] || 0;
+                const currentVariant = product.variants[activeIdx];
+
+                const badgeColors = product.id === 'argan-cosmetic'
+                    ? 'bg-amberEarth-soft text-amberEarth-dark border-amberEarth/20'
+                    : 'bg-olive-soft text-olive-dark border-olive/15';
+
+                const card = document.createElement('div');
+                card.className = 'product-card bg-white rounded-3xl border border-stone-200/80 overflow-hidden flex flex-col justify-between';
+                card.innerHTML = `
+                    <div>
+                        <!-- منطقة الصورة والشارات -->
+                        <div class="relative bg-cream/80 pt-6 pb-4 px-4 border-b border-stone-100">
+                            <div class="flex items-center justify-between gap-2 mb-2">
+                                <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border ${badgeColors}">
+                                    ${product.badge}
+                                </span>
+                                <button onclick="openProductModal('${product.id}')" class="text-xs font-bold text-stone-500 hover:text-olive underline">
+                                    التفاصيل والمصدر
+                                </button>
+                            </div>
+                            <div onclick="openProductModal('${product.id}')" class="cursor-pointer py-2 transition-transform hover:scale-105">
+                                ${getProductSVG(product.svgType)}
+                            </div>
+                            <div class="mt-2 text-center">
+                                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-stone-500 bg-white px-3 py-1 rounded-full border border-stone-200/70">
+                                    📍 ${product.origin}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- تفاصيل المنتج -->
+                        <div class="p-5 space-y-3">
+                            <h3 onclick="openProductModal('${product.id}')" class="font-extrabold text-lg text-olive-dark hover:text-amberEarth cursor-pointer transition-colors leading-snug">
+                                ${product.name}
+                            </h3>
+                            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed line-clamp-3">
+                                ${product.shortDesc}
+                            </p>
+
+                            <!-- اختيار الحجم -->
+                            <div class="pt-2">
+                                <span class="block text-xs font-bold text-stone-500 mb-2">اختر الحجم / الوزن:</span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    ${product.variants.map((v, idx) => `
+                                        <button onclick="selectVariant('${product.id}', ${idx})" 
+                                            class="px-3 py-1.5 rounded-xl text-xs font-bold border transition-all ${
+                                                idx === activeIdx 
+                                                ? 'bg-olive text-white border-olive shadow-sm' 
+                                                : 'bg-cream text-stone-700 border-stone-200 hover:border-olive/50'
+                                            }">
+                                            ${v.size}
+                                        </button>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- السعر وزر الإضافة للسلة -->
+                    <div class="p-5 pt-0 mt-2">
+                        <div class="pt-3 border-t border-stone-100 flex items-center justify-between gap-3">
+                            <div>
+                                <span class="block text-[11px] text-stone-400 font-medium">الثمن</span>
+                                <span class="text-xl font-extrabold text-olive-dark">${currentVariant.price} <span class="text-xs font-bold">درهم</span></span>
+                            </div>
+                            <button onclick="addToCart('${product.id}')" class="flex-1 py-3 px-4 rounded-2xl bg-amberEarth hover:bg-amberEarth-dark text-white font-bold text-xs sm:text-sm shadow-sm transition-all flex items-center justify-center gap-1.5 active:scale-95">
+                                <span>أضف إلى السلة</span>
+                                <span>+</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // تغيير الحجم المختار للمنتج
+        function selectVariant(productId, variantIndex) {
+            selectedVariantIndices[productId] = variantIndex;
+            const activeFilterBtn = document.querySelector('.filter-btn.active');
+            const currentFilter = activeFilterBtn ? activeFilterBtn.id.replace('filter-', '') : 'all';
+            renderProducts(currentFilter);
+        }
+
+        // تصفية المنتجات
+        function filterProducts(category) {
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active', 'bg-olive', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'text-stone-700', 'border', 'border-stone-200');
+            });
+            const activeBtn = document.getElementById(`filter-${category}`);
+            activeBtn.classList.add('active', 'bg-olive', 'text-white', 'shadow-sm');
+            activeBtn.classList.remove('bg-white', 'text-stone-700', 'border', 'border-stone-200');
+            
+            renderProducts(category);
+        }
+
+        // فتح نافذة تفاصيل المنتج
+        function openProductModal(productId) {
+            const product = productsData.find(p => p.id === productId);
+            if (!product) return;
+
+            const activeIdx = selectedVariantIndices[product.id] || 0;
+            const currentVariant = product.variants[activeIdx];
+
+            const modalContent = document.getElementById('modal-content');
+            modalContent.innerHTML = `
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 bg-cream p-4 rounded-2xl border border-stone-200/70">
+                        <div class="w-24 shrink-0">
+                            ${getProductSVG(product.svgType)}
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-amberEarth bg-amberEarth-soft px-2.5 py-1 rounded-full">${product.origin}</span>
+                            <h3 class="text-xl font-extrabold text-olive-dark mt-2">${product.name}</h3>
+                            <p class="text-sm font-bold text-olive mt-1">الحجم المختار: ${currentVariant.size} — ${currentVariant.price} درهم</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3 text-sm text-stone-700 leading-relaxed">
+                        <div class="bg-stone-50 p-3.5 rounded-2xl">
+                            <h4 class="font-extrabold text-olive-dark mb-1">🌿 المكونات والشفافية:</h4>
+                            <p>${product.ingredients}</p>
+                        </div>
+
+                        <div class="bg-stone-50 p-3.5 rounded-2xl">
+                            <h4 class="font-extrabold text-olive-dark mb-1">🍽️ طريقة الاستعمال المقترحة:</h4>
+                            <p>${product.usage}</p>
+                        </div>
+
+                        <div class="bg-stone-50 p-3.5 rounded-2xl">
+                            <h4 class="font-extrabold text-olive-dark mb-1">🏺 شروط الحفظ والتخزين:</h4>
+                            <p>${product.storage}</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 flex gap-3">
+                        <button onclick="addToCart('${product.id}'); closeProductModal();" class="flex-1 py-3.5 px-6 rounded-2xl bg-olive hover:bg-olive-dark text-white font-bold text-sm transition-colors">
+                            أضف إلى السلة (${currentVariant.price} درهم)
+                        </button>
+                    </div>
+                </div>
+            `;
+
+            const modal = document.getElementById('product-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('product-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // إضافة منتج إلى السلة
+        function addToCart(productId) {
+            const product = productsData.find(p => p.id === productId);
+            const variantIdx = selectedVariantIndices[productId] || 0;
+            const variant = product.variants[variantIdx];
+
+            const cartItemId = `${product.id}-${variant.size}`;
+            const existingItem = cart.find(item => item.cartItemId === cartItemId);
+
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    cartItemId,
+                    productId: product.id,
+                    name: product.name,
+                    size: variant.size,
+                    price: variant.price,
+                    quantity: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`تمت إضافة "${product.name} (${variant.size})" إلى السلة`);
+        }
+
+        // تعديل الكمية في السلة
+        function updateQuantity(cartItemId, delta) {
+            const itemIndex = cart.findIndex(item => item.cartItemId === cartItemId);
+            if (itemIndex === -1) return;
+
+            cart[itemIndex].quantity += delta;
+            if (cart[itemIndex].quantity <= 0) {
+                cart.splice(itemIndex, 1);
+            }
+            updateCartUI();
+        }
+
+        // تحديث واجهة السلة والحسابات
+        function updateCartUI() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const badge = document.getElementById('cart-badge');
+            badge.textContent = totalItems;
+            badge.classList.add('scale-125');
+            setTimeout(() => badge.classList.remove('scale-125'), 200);
+
+            const container = document.getElementById('cart-items-container');
+            const summaryBox = document.getElementById('cart-summary-box');
+            const checkoutForm = document.getElementById('cod-checkout-form');
+            const successBox = document.getElementById('order-success-box');
+
+            // إخفاء رسالة النجاح إذا قام المستخدم بالتعديل على السلة
+            if (cart.length > 0) {
+                successBox.classList.add('hidden');
+            }
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 space-y-3">
+                        <div class="text-5xl">🧺</div>
+                        <h4 class="font-bold text-stone-700">سلة مشترياتك فارغة حالياً</h4>
+                        <p class="text-xs text-stone-500 max-w-xs mx-auto">اكتشف تشكيلتنا من زيت الزيتون، أملو البلدي، وزيت أركان الأصيل.</p>
+                        <button onclick="toggleCart()" class="mt-2 px-5 py-2.5 rounded-xl bg-olive text-white text-xs font-bold">
+                            تصفح المنتجات
+                        </button>
+                    </div>
+                `;
+                summaryBox.classList.add('hidden');
+                checkoutForm.classList.add('hidden');
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="bg-white p-3.5 rounded-2xl border border-stone-200/80 flex items-center justify-between gap-3">
+                    <div class="flex-1">
+                        <h4 class="font-bold text-sm text-olive-dark leading-snug">${item.name}</h4>
+                        <span class="inline-block text-xs text-stone-500 mt-0.5">الحجم: ${item.size} • ${item.price} درهم</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-cream px-2 py-1 rounded-xl border border-stone-200">
+                        <button onclick="updateQuantity('${item.cartItemId}', -1)" class="w-6 h-6 rounded-lg bg-white text-stone-700 font-bold hover:bg-stone-100">-</button>
+                        <span class="text-xs font-extrabold w-5 text-center">${item.quantity}</span>
+                        <button onclick="updateQuantity('${item.cartItemId}', 1)" class="w-6 h-6 rounded-lg bg-white text-stone-700 font-bold hover:bg-stone-100">+</button>
+                    </div>
+                </div>
+            `).join('');
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal >= 300 ? 0 : 35;
+            const total = subtotal + shipping;
+
+            document.getElementById('cart-subtotal').textContent = `${subtotal} درهم`;
+            document.getElementById('cart-shipping').textContent = shipping === 0 ? 'مجاني 🎉' : `${shipping} درهم`;
+            document.getElementById('cart-total').textContent = `${total} درهم`;
+
+            const freeHint = document.getElementById('free-shipping-hint');
+            if (subtotal >= 300) {
+                freeHint.classList.add('hidden');
+            } else {
+                freeHint.classList.remove('hidden');
+                document.getElementById('remaining-for-free').textContent = (300 - subtotal);
+            }
+
+            summaryBox.classList.remove('hidden');
+            checkoutForm.classList.remove('hidden');
+        }
+
+        // فتح/إغلاق السلة
+        function toggleCart() {
+            const drawer = document.getElementById('cart-drawer');
+            drawer.classList.toggle('hidden');
+        }
+
+        // فتح/إغلاق قائمة الموبايل
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // إرسال وتأكيد الطلب (الدفع عند الاستلام)
+        function submitOrder(event) {
+            event.preventDefault();
+            if (cart.length === 0) return;
+
+            const name = document.getElementById('customer-name').value.trim();
+            const phone = document.getElementById('customer-phone').value.trim();
+            const city = document.getElementById('customer-city').value;
+            const address = document.getElementById('customer-address').value.trim();
+
+            const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const shipping = subtotal >= 300 ? 0 : 35;
+            const total = subtotal + shipping;
+
+            const randomRef = 'ASJ-' + Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('order-ref-number').textContent = `#${randomRef}`;
+
+            document.getElementById('order-summary-details').innerHTML = `
+                <p><strong>الزبون:</strong> ${name}</p>
+                <p><strong>الهاتف:</strong> <span dir="ltr">${phone}</span></p>
+                <p><strong>المدينة والعنوان:</strong> ${city} - ${address}</p>
+                <p><strong>المبلغ الواجب أداؤه عند الاستلام:</strong> <span class="text-olive-dark font-extrabold">${total} درهم</span></p>
+            `;
+
+            // تفريغ السلة وإظهار رسالة التأكيد
+            cart = [];
+            document.getElementById('cart-badge').textContent = '0';
+            document.getElementById('cart-items-container').innerHTML = '';
+            document.getElementById('cart-summary-box').classList.add('hidden');
+            document.getElementById('cod-checkout-form').classList.add('hidden');
+            document.getElementById('order-success-box').classList.remove('hidden');
+            document.getElementById('cod-checkout-form').reset();
+        }
+
+        function resetAfterOrder() {
+            document.getElementById('order-success-box').classList.add('hidden');
+            updateCartUI();
+            toggleCart();
+        }
+
+        // إظهار إشعار الإضافة للسلة
+        let toastTimeout;
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = message;
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+
+        // تهيئة الصفحة عند التحميل
+        window.addEventListener('DOMContentLoaded', () => {
+            renderProducts('all');
+            updateCartUI();
+        });
+    </script>
+</body>
+</html>
