@@ -1187,7 +1187,34 @@
                 <p><strong>المدينة والعنوان:</strong> ${city} - ${address}</p>
                 <p><strong>المبلغ الواجب أداؤه عند الاستلام:</strong> <span class="text-olive-dark font-extrabold">${total} درهم</span></p>
             `;
+            // تجهيز قائمة المنتجات وإرسال الطلب إلى البريد الإلكتروني
+    const productsSummary = cart.map(item => `${item.name} (الكمية: ${item.quantity} - السعر: ${item.price * item.quantity} درهم)`).join('\n');
 
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            access_key: "fb440338-7023-40be-9a3a-d12e3e01572a",
+            subject: `طلب جديد من متجر أسالا - رقم #${randomRef}`,
+            from_name: "متجر أسالا الإلكتروني",
+            "رقم_الطلب": randomRef,
+            "اسم_الزبون": name,
+            "رقم_الهاتف": phone,
+            "المدينة_والعنوان": `${city} - ${address}`,
+            "المنتجات_المطلوبة": productsSummary,
+            "المبلغ_الإجمالي": `${total} درهم`
+        })
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            console.log("تم إرسال الطلب بنجاح");
+        }
+    })
+    .catch(error => console.error("خطأ في الإرسال:", error));
             // تفريغ السلة وإظهار رسالة التأكيد
             cart = [];
             document.getElementById('cart-badge').textContent = '0';
